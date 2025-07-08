@@ -14,4 +14,5 @@ __pycache__/
 .DS_Store
 
 # Arquivos de dados por extensão
-data/
+data/raw/*.json
+data/processed/*.csv
