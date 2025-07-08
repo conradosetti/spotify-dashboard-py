@@ -58,6 +58,7 @@ cd spotify-dashboard-py
 ```
 
 2. *Create and Activate a Virtual Environment*
+
 It is highly recommended to use a virtual environment to manage project dependencies.
 
 *Windows:*
@@ -73,6 +74,7 @@ source venv/bin/activate
 ```
 
 3. *Install Dependencies*
+
 Install all the required Python libraries using pip.
 
 ```
@@ -80,6 +82,7 @@ pip install -r requirements.txt
 ```
 
 4. *Set Up Environment Variables*
+
 This project requires API keys to function. Make a copy of the example environment file:
 
 ```
@@ -103,12 +106,14 @@ IPINFO_TOKEN=your_ipinfo_token
 ```
 
 5. *Add Your Spotify Data*
+
 Place your `Streaming_History_Audio_*.json` files inside the data/raw/ directory (if you don't have a raw dir create one).
 
 ## Usage
 
 The project is divided into two main steps: processing the data and running the dashboard.
 1. *Run the ETL Process*
+
 Execute the data processing script. This will consolidate your JSON files, fetch data from the APIs, and create the final `streaming_history_consolidated.csv` file in the data/processed/ folder.
 
 ```
