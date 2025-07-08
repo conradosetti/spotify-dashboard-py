@@ -1,3 +1,6 @@
+# Arquivos de configuração do ambiente
+.env
+
 # Ambiente Virtual
 venv/
 .venv/
@@ -16,3 +19,7 @@ __pycache__/
 # Arquivos de dados por extensão
 data/raw/*.json
 data/processed/*.csv
+data/processed/*.json
+
+# Arquivos de cache
+.cache
