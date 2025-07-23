@@ -117,7 +117,7 @@ def add_genres(df):
     with open(cache_path, 'w', encoding='utf-8') as f:
         json.dump(genres_cache, f, indent=4)
 
-    df['genres'] = df['master_metadata_album_artist_name'].map(lambda x: genres_cache.get(x)[0] if (x and genres_cache.get(x)) else 'N/A')
+    df['genres'] = df['master_metadata_album_artist_name'].map(lambda x: ', '.join(genres_cache.get(x)) if (x and genres_cache.get(x)) else 'N/A')
     
     return df
 

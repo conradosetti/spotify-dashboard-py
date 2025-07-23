@@ -1,0 +1,40 @@
+{
+  "name": "spotify-dashboard",
+  "version": "0.1.0",
+  "description": "Um visualizador para o seu histórico de streaming do Spotify.",
+  "main": "./build/electron/main.js",
+  "scripts": {
+    "dump": "dump-stlite-desktop-artifacts",
+    "start": "electron .",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "stlite": {
+    "desktop": {
+      "entrypoint": "src/app.py",
+      "dependencies": [
+        "pandas",
+        "plotly",
+        "altair==5.2.0"
+      ],
+      "files": [
+        "./src/app.py",
+      "./data/processed/streaming_history_consolidated.csv"
+    ]
+    }
+  },
+  "build": {
+    "files": [
+      "build/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": null
+    }
+  },
+  "devDependencies": {
+    "@stlite/desktop": "^0.86.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}

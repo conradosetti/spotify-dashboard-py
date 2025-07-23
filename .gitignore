@@ -23,3 +23,9 @@ data/processed/*.json
 
 # Arquivos de cache
 .cache
+
+
+package-lock.json
+build/
+dist/
+node_modules/
